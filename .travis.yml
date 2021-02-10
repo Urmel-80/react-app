@@ -6,4 +6,4 @@ before_install:
   - docker build -t urmel-80/react-app -f Dockerfile.dev .
 
 script:
-  - docker run urmel-80/react-app npm run test -- --coverage
+  - docker run -e CI=true urmel-80/react-app npm run test -- --coverage
